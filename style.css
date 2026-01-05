@@ -278,6 +278,15 @@ body.dark-mode .dark-mode-toggle .moon-icon {
     50% { transform: translateY(-20px); }
 }
 
+/* Profile Photo Styling */
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* Section Styles */
 .section-title {
     font-size: 2.5rem;
@@ -653,6 +662,39 @@ body.dark-mode .skills {
 .btn-resume svg {
     width: 16px;
     height: 16px;
+}
+
+/* Resume Download Container - Centered Below Contact Cards */
+.resume-download-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-resume-large {
+    padding: 16px 48px;
+    background: linear-gradient(90deg, var(--royal-purple), var(--light-blue));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn-resume-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+}
+
+.btn-resume-large svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* Footer */
