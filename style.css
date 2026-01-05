@@ -633,6 +633,35 @@ body.dark-mode .skills {
 .contact-card p {
     color: var(--text-light);
     font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* Resume Button Styling */
+.btn-resume {
+    margin-top: 1rem;
+    padding: 10px 24px;
+    background: linear-gradient(90deg, var(--royal-purple), var(--light-blue));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-resume:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+.btn-resume svg {
+    width: 16px;
+    height: 16px;
 }
 
 /* Resume Download Container - Centered Below Contact Cards */
