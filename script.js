@@ -1,3 +1,24 @@
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+// Check for saved dark mode preference
+const darkMode = localStorage.getItem('darkMode');
+if (darkMode === 'enabled') {
+    body.classList.add('dark-mode');
+}
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    // Save preference
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
+
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
@@ -131,3 +152,28 @@ if (heroTitle) {
         setTimeout(typeWriter, 500);
     });
 }
+
+// Add animation to dark mode toggle on page load
+window.addEventListener('load', () => {
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.style.animation = 'bounceIn 0.8s ease';
+});
+
+// Create bounce animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes bounceIn {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+`;
+document.head.appendChild(style);
