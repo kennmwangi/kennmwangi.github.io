@@ -428,6 +428,24 @@ body.dark-mode .about {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
+.project-image-container {
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--light-blue), var(--royal-purple), var(--ivory-gold));
+}
+
+.project-screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-screenshot {
+    transform: scale(1.05);
+}
+
 .project-image {
     height: 200px;
     display: flex;
